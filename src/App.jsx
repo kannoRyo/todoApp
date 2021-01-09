@@ -1,10 +1,12 @@
+import Router from './Router'
+import './assets/style/style.css'
+import './assets/style/reset.css'
 
-
-function App() {
+const App = ()=> {
   return (
-    <div>
-      aaaaaaa
-    </div>
+    <main>
+      <Router />
+    </main>
   );
 }
 
