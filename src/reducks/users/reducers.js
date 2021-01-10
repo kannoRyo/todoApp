@@ -12,6 +12,10 @@ export const usersReducers = (state= initialState.users, action)=>{
             return{
                 ...action.payload
             }
+        case Actions.SIGN_OUT_ACTION:
+            return{
+                ...action.payload
+            }
         default:
             return state 
     }

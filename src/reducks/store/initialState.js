@@ -3,7 +3,7 @@ const initialState = {
         uid: '',
         isSignedIn: false,
         username: '',
-        teams: '',
+        team: '',
     }
 }
 
