@@ -35,13 +35,16 @@ export const addTodo = (content, deadline)=>{
 }
 
 export const fetchTodos = ()=>{
-    return async (dispatch)=>{
+    return async (dispatch, getState)=>{
+        const uid = getState().users.uid 
         todosRef.orderBy('deadline', 'asc').get()
             .then((snapshots)=>{
                 const todosList = []
                 snapshots.forEach(snapshot=> {
                     const data = snapshot.data()
-                    todosList.push(data)
+                    if(uid === data.uid){
+                        todosList.push(data)
+                    }
                 })
                 dispatch(fetchTodosAction(todosList))
             })

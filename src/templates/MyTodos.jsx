@@ -17,6 +17,7 @@ const useStyles = makeStyles({
 const MyTodos = ()=>{
     const classes = useStyles()
     const dispatch = useDispatch()
+    const selector = useSelector(state=> state)
     const [open, setOpen] = useState(false)
     const [content, setContent] = useState('')
     const [deadline, setDeadline] = useState('')
@@ -44,7 +45,7 @@ const MyTodos = ()=>{
 
     useEffect(()=>{
         dispatch(fetchTodos())
-    },)
+    },[selector.users])
 
 	return (
         <section className="c-section-wrapin">

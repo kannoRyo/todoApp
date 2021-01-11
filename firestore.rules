@@ -6,26 +6,12 @@ service cloud.firestore {
       allow create;
       allow update: if request.auth.uid == userId ;
       allow delete: if request.auth.uid == userId ;
-
-      match / {cart}/{cartId}{
-        allow read : if request.auth.uid == userId;
-        allow write: if request.auth.uid == userId;
-      }
-
-      match / {orders}/{orderId}{
-        allow read : if request.auth.uid == userId;
-        allow write: if request.auth.uid == userId;        
-      }
     }
 
-    match /products/{productId}{
+    match /{todos}/{todoId}{
       allow read: if request.auth.uid != null;
       allow write: if request.auth.uid != null;
     }
 
-    match / {categories}/{categoryId}{
-      allow read: if request.auth.uid != null;
-      allow write: if request.auth.uid != null;
-    }
   }
 }
