@@ -58,7 +58,7 @@ const MyTodos = ()=>{
                 open={open} handleOpen={()=>handleOpen()} handleClose={()=> handleClose()}
                 content={content} onChange={inputContent}　
                 deadline={deadline} handleDeadline={(e)=> handleDeadline(e)}
-                initialize={initializeDialog}
+                initialize={initializeDialog}　
             />
         </section>
 )

@@ -15,13 +15,12 @@ const TodosList = (props)=>{
     const selector = useSelector(state=> state)
     const todos = selector.todos.list
     const classes = useStyles()
-    console.log(todos)
 
 	return (
 	<List className={classes.list}>
         {todos.length > 0 && (
             todos.map(todo=>(
-                <TodoContent  content={todo.content} deadline={todo.deadline} key={todo.id} />
+                <TodoContent  content={todo.content} deadline={todo.deadline} id={todo.id} key={todo.id} />
             ))
         )}
     </List>
