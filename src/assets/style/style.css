@@ -25,12 +25,32 @@
     width: 100%;
 }
 
+.c-section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
 .c-section-container {
     margin: 0 auto;
     max-width: 400px;
     padding: 1rem;
     height: auto;
     width: calc(100% - 2rem);
+}
+
+.c-box{
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 602px;
+    width: 100%;
+    max-width: 400px;
+    padding:0  1rem;
+    border:1px solid #ddd;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .c-section__loading {
@@ -138,8 +158,9 @@
 }
 
 .u-text__headline {
-    color: #4dd0e1;
+    color: #52db33;
     font-size: 1.563rem;
+    font-weight: 600;
     margin: 0 auto 1rem auto;
 }
 

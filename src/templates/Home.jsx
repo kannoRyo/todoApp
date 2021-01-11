@@ -7,6 +7,8 @@ const Home = ()=>{
 	const selector = useSelector(state => state)
 	const dispatch = useDispatch()
 
+	console.log(selector.users)
+
 	return (
 	<div>
 		<h2>This is Home</h2>

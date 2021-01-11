@@ -5,9 +5,11 @@ import { useSelector } from 'react-redux'
 
 const App = ()=> {
   return (
-    <main className="c-main">
+    <section className="c-section">
+      <div className="c-box">
       <Router />
-    </main>
+      </div>
+    </section>
   );
 }
 

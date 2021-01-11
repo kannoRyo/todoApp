@@ -4,6 +4,9 @@ const initialState = {
         isSignedIn: false,
         username: '',
         team: '',
+    },
+    todos:{
+        list:[]
     }
 }
 

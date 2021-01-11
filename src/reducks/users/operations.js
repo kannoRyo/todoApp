@@ -19,7 +19,6 @@ export const listenAuthState = ()=>{
                                 username: data.username,
                                 team: data.team
                             }))
-                            dispatch(push('/'))
                     })
             }else{
                 dispatch(push('/signin'))
@@ -102,7 +101,6 @@ export const signUp = (username, email, password, confirmPassword) =>{
 
 export const signOut = ()=>{
     return async (dispatch)=>{
-        console.log('AA')
         auth.signOut() 
             .then(()=>{
                 dispatch(signOutAction())
