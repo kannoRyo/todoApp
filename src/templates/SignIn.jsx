@@ -5,6 +5,7 @@ import {
     GreenButton
 } from '../components/Uikit/index'
 import { signIn } from '../reducks/users/operations'
+import {push} from 'connected-react-router'
 
 const SignUp = ()=>{
     const dispatch = useDispatch()
@@ -45,6 +46,8 @@ const SignUp = ()=>{
                 text={"ログインする"}
                 onClick={()=> dispatch(signIn(email,password))}
             />
+            <div className="module-spacer--small" />
+            <h3 onClick={()=> dispatch(push("/signup"))}>アカウント作成はこちら</h3>
         </section>
 )
 }

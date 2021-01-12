@@ -39,7 +39,7 @@ const TodoContent = (props)=>{
             </ListItemAvatar>
             <ListItemText
                 primary={props.content}
-                secondary={props.deadline}
+                secondary={`〆切:${props.deadline}`}
             />
             <Checkbox
                 color="default"

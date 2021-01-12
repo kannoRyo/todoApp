@@ -5,9 +5,11 @@ import {
     GreenButton
 } from '../components/Uikit/index'
 import { signUp } from '../reducks/users/operations'
+import {push} from 'connected-react-router'
 
 const SignUp = ()=>{
     const dispatch = useDispatch()
+
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -30,49 +32,51 @@ const SignUp = ()=>{
     },[confirmPassword])
 
 	return (
-	<section className="c-section-wrapin">
-        <h2>アカウント登録</h2>
-        <TextInput 
-            fullWidth={true}
-            label={"ユーザーネーム"}
-            multiline={false}
-            rows={1}
-            type={"text"}
-            value={username}
-            onChange={inputUsername}
-        />
-        <TextInput 
-            fullWidth={true}
-            label={"メールアドレス"}
-            multiline={false}
-            rows={1}
-            type={"text"}
-            value={email}
-            onChange={inputEmail}
-        />
-        <TextInput 
-            fullWidth={true}
-            label={"パスワード"}
-            multiline={false}
-            rows={1}
-            type={"text"}
-            value={password}
-            onChange={inputPassword}
-        />
-        <TextInput 
-            fullWidth={true}
-            label={"パスワードをもう一度入力してください"}
-            multiline={false}
-            rows={1}
-            type={"text"}
-            value={confirmPassword}
-            onChange={inputConfirmPassword}
-        />
-        <GreenButton 
-            text={"アカウントを登録する"}
-            onClick={()=> dispatch(signUp(username, email,password,confirmPassword))}
-        />
-    </section>
+        <section className="c-section-wrapin">
+            <h2>アカウント登録</h2>
+            <TextInput 
+                fullWidth={true}
+                label={"ユーザーネーム"}
+                multiline={false}
+                rows={1}
+                type={"text"}
+                value={username}
+                onChange={inputUsername}
+            />
+            <TextInput 
+                fullWidth={true}
+                label={"メールアドレス"}
+                multiline={false}
+                rows={1}
+                type={"text"}
+                value={email}
+                onChange={inputEmail}
+            />
+            <TextInput 
+                fullWidth={true}
+                label={"パスワード"}
+                multiline={false}
+                rows={1}
+                type={"text"}
+                value={password}
+                onChange={inputPassword}
+            />
+            <TextInput 
+                fullWidth={true}
+                label={"パスワードをもう一度入力してください"}
+                multiline={false}
+                rows={1}
+                type={"text"}
+                value={confirmPassword}
+                onChange={inputConfirmPassword}
+            />
+            <GreenButton 
+                text={"アカウントを登録する"}
+                onClick={()=> dispatch(signUp(username, email,password,confirmPassword))}
+            />
+            <div className="module-spacer--small" />
+            <h3 onClick={()=> dispatch(push("/signin"))}>アカウントをお持ちの方はこちら</h3>
+        </section>
 )
 }
 

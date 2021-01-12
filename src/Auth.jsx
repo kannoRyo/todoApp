@@ -16,7 +16,7 @@ const Auth = ({children})=>{
         },[])
 
         if(!isSignedIn){
-                return children
+                return <></>
         }else{
                 return children
         }

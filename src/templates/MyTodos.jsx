@@ -7,9 +7,12 @@ import{
     AddTodosDialog    
 } from '../components/Uikit/index'
 import {fetchTodos} from '../reducks/todos/operations'
+import HomeIcon from '@material-ui/icons/Home';
+import {push} from 'connected-react-router'
 
 const useStyles = makeStyles({
     title:{
+        display: 'flex',
         marginTop:'15px'
     }
 })
@@ -49,6 +52,7 @@ const MyTodos = ()=>{
 
 	return (
         <section className="c-section-wrapin">
+            <HomeIcon onClick={()=> dispatch(push('/'))}/>
             <div className={classes.title}>
                 <h2 className="u-text__headline">MyTodos</h2>
             </div>
