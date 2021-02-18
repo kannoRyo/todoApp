@@ -168,6 +168,23 @@
     display: none;
 }
 
+.auth-heading {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.auth-input{
+    margin: 30px 0 40px;
+}
+
+.home-i{
+    margin: 15px auto 10px;
+}
+
+.home-heading{
+    text-align: center;
+}
+
 @media screen and (min-width: 576px) {
     /*********** Module Spacer ***********/
     .module-spacer--extra-extra-small {

@@ -32,6 +32,7 @@ const AddTodosDialog = (props)=>{
                         fullWidth={true} label={"Todo"} multiline={true} rows={2}
                         type={"text"} value={props.content} onChange={props.onChange} 
                     />
+                    <div  className="module-spacer--small" />
                     <DatePicker
                         deadline={props.deadline} handleDeadline={props.handleDeadline}
                     />

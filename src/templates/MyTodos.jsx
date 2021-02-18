@@ -1,6 +1,6 @@
 import React, {useState,useCallback, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import{makeStyles} from '@material-ui/core'
+import{makeStyles, Button} from '@material-ui/core'
 import{
     TodosList,
     AddTodosButton,
@@ -52,7 +52,12 @@ const MyTodos = ()=>{
 
 	return (
         <section className="c-section-wrapin">
-            <HomeIcon onClick={()=> dispatch(push('/'))}/>
+            <div className="home-i" >
+                <Button  onClick={()=> dispatch(push('/'))} style={{backgroundColor: '#eee', padding: '7px'}} >
+                    <h3>ホームに戻る</h3>
+                    <HomeIcon/>
+                </Button>
+            </div>
             <div className={classes.title}>
                 <h2 className="u-text__headline">MyTodos</h2>
             </div>

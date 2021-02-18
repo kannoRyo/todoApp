@@ -12,19 +12,24 @@ const Home = ()=>{
 	console.log(selector.users)
 
 	return (
-	<div>
-		<h2>This is Home</h2>
-		<h3>ユーザーネーム:{selector.users.username}</h3>
-		<h3>id:{selector.users.uid}</h3>
+	<div>	
 		<div className="module-spacer--small"/>
-		<GreenButton
-			text={"MyToDoを見る"}
-			onClick={()=> dispatch(push('/mytodos'))}
-		/>
+		<div className="home-heading" >
+			<h2>This is Home</h2>
+			<h3>ユーザーネーム:{selector.users.username}</h3>
+			<h3>id:{selector.users.uid}</h3>
+		</div>
 		<div className="module-spacer--small"/>
-		<Button variant="contained" color="secondary" onClick={ ()=> dispatch(signOut())}>
-			ログアウトする
-		</Button>
+		<div className="center" >
+			<GreenButton
+				text={"MyToDoを見る"}
+				onClick={()=> dispatch(push('/mytodos'))}
+			/>
+			<div className="module-spacer--small"/>
+			<Button variant="contained" color="secondary" onClick={ ()=> dispatch(signOut())}>
+				ログアウトする
+			</Button>
+		</div>
 	</div>
 )
 }
